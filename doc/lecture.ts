@@ -33,3 +33,28 @@
  * 예를 들어, list = [1, 2, 3]이고, list.map((item) => item * 2)라면
  * list.map 함수는 [2, 4, 6]을 리턴한다.
  */
+
+/**
+ * Props는 부모 컴포넌트에서 자식 컴포넌트로 전달하는 데이터이다.
+ * Javascript에서는 Props를 다음과 같이 사용할 수 있다.
+    export default function Profile(props) {
+        return (
+            <div className='profile'>
+                <img className='photo'
+                    src={props.img}
+                    alt="avatar"
+                />
+                <h1>{props.name}</h1>
+                <p>{props.title}</p>
+            </div>
+        );
+    }
+ * 여기서 props를 destructuring을 사용해서 다음과 같이 사용할 수 있다.   
+    export default function Profile({ img, name, title }) {
+ * 이렇게 사용하면, props.img, props.name, props.title를 img, name, title로 사용할 수 있다. 
+ */
+
+/**
+ * First callenage
+ * 새로운 User가 추가될 때 new icon이 사람 우ㅏ에 표시되도록 하라
+ */

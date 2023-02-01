@@ -9,10 +9,21 @@
 
 import React from 'react';
 
-export default function Profile() {
+interface Props {
+    img: string;
+    name: string;
+    title: string;
+}
+
+export const Profile: React.FC<Props> = ({ img, name, title }) => {
     return (
-        <div>
-            <h1>profile!!</h1>
+        <div className='profile'>
+            <img className='photo'
+                src={img}
+                alt="avatar"
+            />
+            <h1>{name}</h1>
+            <p>{title}</p>
         </div>
     );
 }
